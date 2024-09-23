@@ -23,6 +23,15 @@ print('type :' , type(current_year))
 
 
 #CALCULATIONS
+GST = 0.05
+PST = 0.07
+vehicle_price = 70000
+
+print('pre-tax value :',vehicle_price) 
+print('Provincial Tax:', PST * vehicle_price) 
+print('Federal Tax:', GST * vehicle_price) 
+print('Total :' , (PST * vehicle_price)+(GST * vehicle_price))
+
 
 #LISTS
 
