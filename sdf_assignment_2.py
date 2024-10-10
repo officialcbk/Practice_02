@@ -9,9 +9,9 @@ name = "Emmanuel"
 print('name:' ,name)
 print('type:' ,type(name))
 
-current_driving_status = False
-print('has driving license:' , current_driving_status)
-print('type:', type(current_driving_status))
+has_driving_license = False
+print('has driving license:' , has_driving_license)
+print('type:', type(has_driving_license))
 
 current_year = 2024
 print('this year:' , current_year)
@@ -25,13 +25,14 @@ print('type :' , type(current_year))
 #CALCULATIONS
 GST = 0.05
 PST = 0.07
-vehicle_price = 70000
+purchase_price = 70000
 
-print('pre-tax value :',vehicle_price) 
-print('Provincial Tax:', PST * vehicle_price) 
-print('Federal Tax:', GST * vehicle_price) 
-print('Total :' , (PST * vehicle_price)+(GST * vehicle_price))
+federal_tax = purchase_price * GST
+provincial_tax = purchase_price * PST
 
+final_cost = purchase_price + federal_tax + provincial_tax
+
+print(f"Purchase Price: {purchase_price}, Federal Tax: {federal_tax}, Provincial Tax: {provincial_tax}, Final Cost: {final_cost}")
 
 #LISTS
 list_of_numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
@@ -55,18 +56,26 @@ print(canadian_provinces)
 
 
 #DICTIONARIES
-
 canadian_currency = {
-    'nickel': 5,
-    'dime': 10,
-    'quarter':25,
-     'looney':100,
-     'tooney':200
-
+    'nickel': 0.05,
+    'dime': 0.10,
+    'quarter': 0.25
 }
+
+print(type(canadian_currency))
 
 print(canadian_currency)
 
+canadian_currency['nickel'] = 5      #Modified the values of nickel,dime,quarter
+canadian_currency['dime'] = 10
+canadian_currency['quarter'] = 25
+
+print(canadian_currency)
+
+canadian_currency['loonie'] = 100   #Added loonie and tooney to the dictionary
+canadian_currency['toonie'] = 200
+
+print(canadian_currency)
 
 #SETS
 
